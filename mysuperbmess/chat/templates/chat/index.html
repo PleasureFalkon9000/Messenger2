@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<section class = "section">
+    <div class = "container">
+        <div class="hero-is-primary"></div>
+        <div class="hero-body">
+            <p class="Title">
+                Chat Rooms
+            </p>
+        </div>
+    </div>
+</section>
+<head>
+    <meta charset="utf-8"/>
+    <title>Chat Rooms</title>
+</head>
+<body>
+    В какой чатик залетаем?<br>
+    <input id="room-name-input" type="text" placeholder="Название комнаты" size="100"><br>
+    Ты хто такой?<br>
+    <input id="username-input" type="text" placeholder="Ник" size="100"><br>
+    <input id="room-name-submit" type="button" value="Enter">
+
+    <script>
+        document.querySelector('#room-name-input').focus();
+
+        document.querySelector('#room-name-submit').onclick = function(e) {
+            var roomName = document.querySelector('#room-name-input').value;
+            var userName = document.querySelector('#username-input').value;
+            window.location.pathname = roomName + '/?username=' + userName;
+        };
+    </script>
+</body>
+</html>
